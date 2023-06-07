@@ -1,38 +1,342 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Alata", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
+  width: 100%;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background-image: url("./images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 50px 8%;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#navLinks {
+  display: flex;
+  align-items: center;
+  color: var(--White);
+}
+
+#navLinks ul {
+  display: flex;
+}
+
+#navLinks ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+}
+
+#navLinks ul li a {
+  text-decoration: none;
+  color: var(--White);
+  font-family: "Alata", sans-serif;
+}
+
+#menuIcons {
+  margin: 20px 0 20px 20px;
+  display: none;
+}
+
+#menuIcons i {
+  font-size: 25px;
+  color: var(--White);
+}
+
+#hero-content {
+  padding: 0 8%;
+}
+
+.headerText {
+  margin-top: 10%;
+  padding: 30px 30px;
+  border: 2px solid var(--White);
+  max-width: 750px;
+}
+
+.headerText h1 {
+  font-size: 78px;
+  color: var(--White);
+}
+
+/* ------------------GALLERY----------------------- */
+
+#gallery {
+  padding: 8%;
+}
+
+.row {
+  display: flex;
+  height: 60vh;
+  position: relative;
+}
+
+.col1 {
+  flex-basis: 60%;
+  background-image: url("./images/desktop/image-interactive.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.col2 {
+  flex-basis: 40%;
+  position: absolute;
+  bottom: -20%;
+  background-color: var(--White);
+  padding: 80px;
+  right: 0;
+}
+
+.galleryTitle {
+  max-width: 400px;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.col2 p {
+  max-width: 525px;
+  color: var(--Very-Dark-Gray);
+  font-weight: 400;
+  line-height: 25px;
+  font-size: 18px;
+  font-family: "Alata", sans-serif;
+}
+
+/* -------------------CREATIONS---------------------*/
+
+#creations {
+  padding: 80px 8% 150px;
+  min-height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.headerFrame {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: var(--Very-Dark-Gray);
+}
+
+.headerFrame h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: var(--Black);
+}
+
+button {
+  padding: 8px 35px;
+  border: 1px solid var(--Black);
+  outline: none;
+  background-color: transparent;
+  color: var(--Very-Dark-Gray);
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+/* ----------------FOOTER------------ */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 8%;
+  background-color: var(--Black);
+}
+
+.leftFooter img {
+  margin-bottom: 40px;
+}
+
+.leftFooter a {
+  color: var(--White);
+  text-decoration: none;
+  margin-right: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.leftFooter a:hover {
+  color: var(--Dark-Gray);
+}
+
+.rightFooter {
+  text-align: right;
+  color: var(--White);
+}
+
+.rightFooter i {
+  color: var(--White);
+  margin-left: 20px;
+  margin-bottom: 40px;
+  transition: 0.4s ease-in;
+}
+
+.rightFooter i:hover {
+  color: var(--Dark-Gray);
+}
+
+/* ---------------MEDIA QUERIES----------------------- */
+@media (max-width: 375px) {
+  .hero-section {
+    background-image: url("./images/mobile/image-hero.jpg");
   }
-  to {
-    transform: rotate(360deg);
+  nav {
+    padding: 20px 5%;
+    background-color: transparent;
+  }
+
+  nav.activeNav {
+    background-color: var(--Black);
+  }
+
+  #menuIcons {
+    display: block;
+  }
+
+  #navLinks {
+    position: fixed;
+    top: 100px;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--Black);
+    box-shadow: 0 10px 30px -7px rgba(0, 0, 0, 0.5);
+    padding-top: 50px;
+    transition: 0.4s ease-in-out;
+  }
+
+  #navLinks.sideBar {
+    right: 0;
+  }
+
+  #navLinks ul {
+    display: block;
+    height: 100%;
+  }
+  #navLinks ul li {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  #hero-content {
+    padding: 0 5%;
+  }
+
+  .headerText {
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .headerText h1 {
+    font-size: 43px;
+  }
+
+  #gallery {
+    padding: 8% 5%;
+  }
+
+  .row {
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 60px;
+  }
+
+  .col1 {
+    width: 100%;
+  }
+
+  .col2 {
+    position: unset;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .galleryTitle {
+    max-width: 700px;
+    font-size: 28px;
+  }
+
+  .col2 p {
+    max-width: 320px;
+    font-size: 16px;
+  }
+
+  /* -------------CREATIONS----------*/
+
+  .headerFrame {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .creationsGallery {
+    position: relative;
+  }
+  button {
+    padding: 8 px 47px;
+    position: absolute;
+    bottom: -7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 3px;
+  }
+
+  /* -----------FOOTER------------ */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .leftFooter {
+    text-align: center;
+    width: 100%;
+  }
+
+  .leftFooter a {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    font-weight: 400;
+  }
+
+  .rightFooter {
+    text-align: center;
+    width: 100%;
   }
 }

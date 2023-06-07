@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+.gameFrame {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  min-height: 100vh;
+}
+
+.Gallery1 {
+  background-image: url("/src/images/mobile/image-deep-earth.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Gallery2 {
+  background-image: url("/src/images/desktop/image-night-arcade.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Gallery3 {
+  background-image: url("/src/images/desktop/image-soccer-team.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Gallery4 {
+  background-image: url("/src/images/desktop/image-grid.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Gallery5 {
+  background-image: url("/src/images/desktop/image-from-above.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Gallery6 {
+  background-image: url("/src/images/desktop/image-pocket-borealis.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Gallery7 {
+  background-image: url("/src/images/desktop/image-curiosity.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Gallery8 {
+  background-image: url("/src/images/desktop/image-fisheye.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.galleryDesign {
+  position: relative;
+}
+
+.galleryDesign::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  background-color: #0000006b;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+  transition: 0.5s ease-in;
+}
+
+.galleryDesign:hover::after {
+  height: 100%;
+}
+
+.galleryDesign h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  max-width: 123px;
+  color: var(--White);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width: 375px) {
+  .gameFrame {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryDesign {
+    height: 150px;
+    /* display: none; */
+  }
+
+  .galleryDesign h2 {
+    font-size: 18px;
+    max-width: 110px;
+  }
+
+  .Gallery1 {
+    background-image: url("/src/images/mobile/image-deep-earth.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Gallery2 {
+    background-image: url("/src/images/mobile/image-night-arcade.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Gallery3 {
+    background-image: url("/src/images/mobile/image-soccer-team.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Gallery4 {
+    background-image: url("/src/images/mobile/image-grid.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Gallery5 {
+    background-image: url("/src/images/mobile/image-from-above.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Gallery6 {
+    background-image: url("/src/images/mobile/image-pocket-borealis.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Gallery7 {
+    background-image: url("/src/images/mobile/image-curiosity.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Gallery8 {
+    background-image: url("/src/images/mobile/image-fisheye.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
